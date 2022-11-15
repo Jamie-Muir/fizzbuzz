@@ -1,0 +1,86 @@
+input {
+ padding: 5px;
+ margin: 10px
+}
+
+.text {
+	color: white;
+	margin: auto;
+	/* width: auto; */
+	text-align: center;
+}
+
+.formContainer {
+	padding: 2em;
+	margin: auto;
+	width: 60%;
+	background-color: purple;
+	display: flex;
+	flex-direction: column;
+}
+
+.labelGroup {
+	border:solid 2px white; 
+	padding: 10px
+}
+
+form {
+	display: grid;
+	grid-template-columns: 1fr 1fr;
+	grid-gap: 20px;
+}
+
+button {
+	height: 80px;
+	width: 150px;
+	margin: 30px auto;
+	margin-bottom: 0;
+	/* background-color: ; */
+	border-radius: 25px;
+	font-size: 24px;
+	transition: all .085s ease;
+}
+
+button:hover {
+	background-color: white;
+}
+
+button:active {
+	background-color: grey;
+	box-shadow: inset rgba(0,0,0, .75) 0px 5px 5px;
+
+}
+
+table, th, td {
+	/* border: 1px solid; */
+	width: 100%;
+  }
+
+table {
+	display: block;
+	text-align: center;
+	width: 20%;
+	margin-left: auto;
+	margin-right: auto;
+	max-height: 450px;
+	overflow-y: scroll;
+	/* border-spacing: 10px; */
+    border-collapse: separate;
+}
+
+thead {
+	position: sticky;
+	top: 0;
+	z-index: 999;
+	text-align: center;
+	background-color: white;
+}
+
+tbody {
+	width: 100%;
+}
+
+tbody tr:nth-child(odd) {
+	
+	background-color: rgb(219, 219, 219);
+}

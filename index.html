@@ -1,0 +1,74 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width, initial-scale=1" />
+	<meta name="theme-color" content="#000000" />
+	<meta name="description" content="Jamie Muir's Web Development Portfolio" />
+
+	<link rel="stylesheet" href="styles.css">
+	<title>Fizz Buzz</title>
+</head>
+
+<body>
+	<noscript>You need to enable JavaScript to run this app.</noscript>
+
+	<div id="root">
+		<div class="formContainer">
+			<div class='text'>
+				<h1>FizzBuzz!</h1>
+				<p> find out if a number is a multiple of either, or both specified numbers between any range! </p>
+			</div>
+			<form>
+				<div class='labelGroup'>
+					<div>
+						<label for='number1'>1: Fizz Number</label>
+						<input type='number' id='fizzInput' value="3" />
+					</div>
+					<div>
+						<label for='number1'>2: Buzz Number</label>
+						<input type='number' id='buzzInput' value="5" />
+					</div>
+				</div>
+
+				<div class='labelGroup'>
+					<div>
+						<label for='number1'>3: Lower Range</label>
+						<input type='number' id='lowerInput' value="0" />
+					</div>
+					<div>
+						<label for='number1'>4: Upper Range</label>
+						<input type='number' id='upperInput' value="100" />
+					</div>
+				</div>
+
+				<button id='submitButton'>Submit</button>
+				<button id='randomButton'>Randomise</button>
+			</form>
+			
+		</div>
+
+
+		<div id='table'>
+			<table id='resultTable'>
+				<thead>
+					<tr>
+						<th>Number</th>
+						<th>Result</th>
+					</tr>
+				</thead>
+				<tbody id='tableBody'>
+
+				</tbody>
+			</table>
+		</div>
+
+
+
+	</div>
+
+	<script src='script.js'></script>
+</body>
+
+</html>
