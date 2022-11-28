@@ -1,26 +1,30 @@
-const fizzInput = document.getElementById('fizzInput');
-const buzzInput = document.getElementById('buzzInput');
-const lowerInput = document.getElementById('lowerInput');
-const upperInput = document.getElementById('upperInput');
+const getElement = (el) => document.getElementById(el);
+
+const fizzInput = getElement('fizzInput');
+const buzzInput = getElement('buzzInput');
+const lowerInput = getElement('lowerInput');
+const upperInput = getElement('upperInput');
+
+const submitButton = getElement('submitButton');
+const randomButton = getElement('randomButton');
 
 
-const submitButton = document.getElementById('submitButton');
-const randomButton = document.getElementById('randomButton');
+const fizzBuzz = (num, fizz, buzz) => {
+	let result = ''
+	if (num % fizz === 0) result += 'fizz';
+	if (num % buzz === 0) result += 'buzz';
+	else result = num.toString();
+	return result;
+}
 
-const fizzbuzz = (fizz, buzz, num1 = 0, num2 = 100) => {
-	let resArray = [];
+const fizzBuzzRange = (fizz, buzz, num1 = 0, num2 = 100) => {
+	let resultArray = [];
 
 	for (let i = num1; i <= num2; i++) {
-		let result = "";
-
-		if (i % fizz == 0) result += 'fizz';
-		if (i % buzz == 0) result += 'buzz';
-
-		if (result == '') result = i.toString();
-
-		resArray.push([i, result]);
+		let result = fizzBuzz(i, fizz, buzz);
+		resultArray.push([i, result]);
 	}
-	return resArray;
+	return resultArray;
 }
 
 const loadTableData = (data) => {
@@ -46,7 +50,7 @@ submitButton.addEventListener('click', (event) => {
 	let lower = lowerInput.value;
 	let upper = upperInput.value;
 
-	loadTableData(fizzbuzz(fizz, buzz, lower, upper))
+	loadTableData(fizzBuzzRange(fizz, buzz, lower, upper))
 })
 
 const mathRandom = (size) => Math.floor(Math.random() * size);
