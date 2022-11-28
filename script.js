@@ -9,7 +9,7 @@ const submitButton = getElement('submitButton');
 const randomButton = getElement('randomButton');
 
 
-const fizzBuzz = (num, fizz, buzz) => {
+const doFizzBuzz = (num, fizz, buzz) => {
 	let result = ''
 	if (num % fizz === 0) result += 'fizz';
 	if (num % buzz === 0) result += 'buzz';
@@ -17,11 +17,11 @@ const fizzBuzz = (num, fizz, buzz) => {
 	return result;
 }
 
-const fizzBuzzRange = (fizz, buzz, num1 = 0, num2 = 100) => {
+const doFizzBuzzRange = (fizz, buzz, num1 = 0, num2 = 100) => {
 	let resultArray = [];
 
 	for (let i = num1; i <= num2; i++) {
-		let result = fizzBuzz(i, fizz, buzz);
+		let result = doFizzBuzz(i, fizz, buzz);
 		resultArray.push([i, result]);
 	}
 	return resultArray;
@@ -50,7 +50,7 @@ submitButton.addEventListener('click', (event) => {
 	let lower = lowerInput.value;
 	let upper = upperInput.value;
 
-	loadTableData(fizzBuzzRange(fizz, buzz, lower, upper))
+	loadTableData(doFizzBuzzRange(fizz, buzz, lower, upper))
 })
 
 const mathRandom = (size) => Math.floor(Math.random() * size);
