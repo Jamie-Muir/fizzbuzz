@@ -27,7 +27,7 @@ const doFizzBuzzRange = (fizz, buzz, num1 = 0, num2 = 100) => {
 	return resultArray;
 }
 
-const loadTableData = (data) => {
+const fillTableData = (data) => {
 	const tableBody = document.getElementById('tableBody');
 	while (tableBody.rows.length > 0) tableBody.deleteRow(0);
 
@@ -50,7 +50,7 @@ submitButton.addEventListener('click', (event) => {
 	let lower = lowerInput.value;
 	let upper = upperInput.value;
 
-	loadTableData(doFizzBuzzRange(fizz, buzz, lower, upper))
+	fillTableData(doFizzBuzzRange(fizz, buzz, lower, upper))
 })
 
 const mathRandom = (size) => Math.floor(Math.random() * size);
