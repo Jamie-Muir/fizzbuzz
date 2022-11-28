@@ -57,6 +57,9 @@ randomButton.addEventListener('click', (event) => {
 	let fizz = mathRandom(10);
 	let buzz = mathRandom(10);
 
+	if (fizz < 2) fizz = 3;
+	if (buzz < 2) buzz = 5;
+
 	let upper = mathRandom(1000);
 	let lower = upper - mathRandom(1000);
 
